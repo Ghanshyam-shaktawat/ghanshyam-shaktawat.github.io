@@ -1,7 +1,12 @@
 export default {
     root: 'src/',
-    publicDir: '../static/',
+    publicDir: '../public/',
     base: './',
+    server:{
+        fs: {
+            allow: ['/']
+        }
+    },
     build:
     {
         outDir: '../dist',
