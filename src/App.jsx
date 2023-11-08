@@ -1,17 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Topbar from './components/Topbar'
+import Home from './sections/Home'
+import About from './sections/About'
+import './styles/App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <h1>I'M GHANSHYAM</h1>
+    <div className='wrapper scroll-smooth'>
+      <div className='snap-x'>
+        <Topbar />
+        <Home />
+        {/* <About /> */}
       </div>
-    </>
+    </div>
   )
 }
 
