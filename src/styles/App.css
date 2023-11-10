@@ -1,3 +1,20 @@
-.app-wrapper {
-  
+.cursor {
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  z-index: 1000;
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: all 200ms ease;
+  transition-property: opacity, transform, background-color;
+}
+
+.click {
+  transform: scale(0.6) !important;
+}
+
+.hover {
+  transform: scale(2.5);
 }

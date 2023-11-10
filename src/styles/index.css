@@ -20,10 +20,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-*{
-  box-sizing: border-box !important;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -31,4 +27,19 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-size: 100%;
+  pointer-events: none;
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #1e1e1e;
+  }
 }

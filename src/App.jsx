@@ -1,20 +1,27 @@
-import { useState } from 'react'
-import Topbar from './components/Topbar'
-import Home from './sections/Home'
-import About from './sections/About'
-import './styles/App.css'
+import { useState, useRef, useEffect } from "react";
+import Topbar from "./components/Topbar";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Cursor from "./components/CustomCursor";
+import { motion } from "framer-motion";
+import "./styles/App.css";
 
 function App() {
 
   return (
-    <div className='wrapper scroll-smooth'>
-      <div className='snap-x'>
+    <div className="">
+      <Cursor />
+      <div>
         <Topbar />
-        <Home />
-        {/* <About /> */}
+        <div>
+          <Home />
+        </div>
+        <div>
+          <About />
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
