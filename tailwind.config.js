@@ -5,14 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      noto: ['Noto Sans', 'sans-serif']
-    },
-    
     extend: {
+      fontFamily: {
+        noto: ['Noto Sans', 'sans-serif'],
+      },
+
       animation: {
         drop: 'MoveUpDown 1.2s linear infinite',
       },
+
       keyframes: {
         MoveUpDown: {
           '0%': { 
@@ -25,12 +26,15 @@ export default {
           },
         }
       },
+
       fontSize: {
         '5xl': '2.8rem'
       },
+
       padding: {
         'wide': '2rem'
       },
+
       colors: {
         transparent: 'transparent',
         current: 'currentColor',

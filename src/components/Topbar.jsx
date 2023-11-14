@@ -1,34 +1,36 @@
-import { AiFillMail } from "react-icons/ai";
-
 function Topbar() {
   return (
-    <div className="h-20 topbar fixed top-0 left-0 right-0 bg-d-gray w-s flex items-center justify-between py-1 px-10 z-50 drop-shadow-md pointer-events-auto">
-      <img className="h-12" src="logo.png"></img>
-      <div className="flex">
+    <div className="h-20 topbar fixed top-0 left-0 right-0 bg-d-gray w-s flex items-center justify-between py-1 px-16 z-40 pointer-events-auto">
+      <img
+        className="h-14 pointer-events-auto"
+        id="big-cursor"
+        src="logo.png"
+      ></img>
+      <div className="flex gap-4">
         <a
-          className="text-white font-bold px-6 py-2 text-base uppercase hover:text-green"
+          className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green"
           aria-current="page"
           href="#"
         >
           Home
         </a>
         <a
-          className="text-white font-bold px-6 py-2 text-base uppercase hover:text-green"
-          href="#"
+          className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green"
+          href="#about"
         >
           About
         </a>
         <a
-          className="text-white font-bold px-6 py-2 text-base uppercase hover:text-green"
+          className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green"
           href="#"
         >
-          My Projects
+          Projects
         </a>
         <a
-          className="text-white font-bold px-6 py-2 text-base uppercase hover:text-green"
+          className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green"
           href="#"
         >
-          Contact Me
+          Contact
         </a>
       </div>
     </div>

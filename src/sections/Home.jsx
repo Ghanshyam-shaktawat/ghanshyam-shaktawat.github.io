@@ -1,28 +1,43 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import MagneticButton from "../components/MagneticButton";
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
+import { Player } from "@lottiefiles/react-lottie-player";
+import Anim from "../assets/animation.json";
 
 export default function Home(props) {
-  return (
-    <div className="relative h-screen bg-d-gray pt-10 flex flex-col justify-center items-center pointer-events-auto">
-      <div className="flex flex-col justify-center items-center gap-4 text-center text-white">
-        <h2 className="uppercase text-3xl font-bold">Hi there &#x1F44B;,</h2>
-        <h1
-          id="big-cursor"
-          className="text-5xl font-black uppercase tracking-wide"
-        >
-          I'M <span className="text-green">Ghanshyam</span> shaktawat
-        </h1>
-        <p className="max-w-3xl text-xl" onMouseEnter={props.move}>
-          I am a full stack web developer with experience in building web
-          applications with React, Django, Node.js and Tailwind. I simply love
-          what I do.
-        </p>
+  const container = useRef(null);
 
-        <button className="bg-green py-3 px-wide text-xl mt-4 text-black font-bold uppercase rounded shadow-xl hover:shadow-2xl shadow-gray-50 pointer-events-auto">
-          Projects
-        </button>
+  return (
+    <div className="relative h-screen bg-d-gray flex flex-col justify-center items-center text-left pointer-events-auto scroll-smooth">
+      <div className="w-[1200px] flex justify-center items-center text-center text-white">
+        <div className="w-7/12 flex flex-col items-start text-center text-white gap-4 z-10">
+          <p className="uppercase text-2xl font-bold">Hi there, I'M </p>
+          <h1
+            id="big-cursor"
+            className="text-6xl font-black uppercase text-left leading-[4rem]"
+          >
+            <span className="text-green">Ghanshyam</span> s.
+          </h1>
+          <h2 className="capitalize text-5xl font-bold text-[#d9d9d9] leading-[3rem]">
+            a full stack web developer
+          </h2>
+          <p className="max-w-2xl text-lg text-left font-light">
+            I am a web developer with experience in building web
+            applications with React, Django, Node.js and Tailwind.
+          </p>
+          <div className="h-2 mt-4">
+            <button className="bg-green font-normal rounded font-sans ">
+              <span className="block bg-d-gray py-2 px-wide rounded border-2 text-lg text-green hover:translate-x-[-4px] hover:translate-y-[-4px] duration-200 transition-all ease-in">
+                My Projects
+              </span>
+            </button>
+          </div>
+        </div>
+        <div className="w-5/12 h-full inline-block relative z-0">
+          <Player className="" src={Anim} loop autoplay style={{width: '100%', height: '100%'}}/>
+          {/*add lottie container*/}
+        </div>
       </div>
       <div className="absolute bottom-8">
         <span className="border-4 rounded-3xl border-white p-3"></span>
@@ -30,27 +45,36 @@ export default function Home(props) {
       <div className="absolute bottom-10 animate-drop">
         <span className="text-white bottom-6 text-5xl font-semibold">.</span>
       </div>
-      <div className="flex flex-col items-center absolute left-4 py-2 px-2 flex flex-col gap-6 pointer-events-auto">
-        {/* <span className="bg-white w-1 py-32 rounded"></span> */}
+      {/* TODO change icons with something better */}
+      <div className="flex flex-col items-center absolute left-4 bottom-2 py-0 px-2 flex flex-col gap-4 pointer-events-auto">
         <MagneticButton>
           <AiFillLinkedin
             id="big-cursor"
-            className="w-10 h-10 hover:text-green"
+            className="w-8 h-8 hover:text-green cursor-pointer"
           />
         </MagneticButton>
         <MagneticButton>
           <AiFillGithub
             id="big-cursor"
-            className="w-10 h-10 hover:text-green"
+            className="w-8 h-8 hover:text-green cursor-pointer"
           />
         </MagneticButton>
         <MagneticButton>
           <AiFillInstagram
             id="big-cursor"
-            className="w-10 h-10 hover:text-green"
+            className="w-8 h-8 hover:text-green cursor-pointer"
           />
         </MagneticButton>
-        {/* <span className="bg-white w-1 py-16 rounded"></span> */}
+        <span className="bg-white w-0.5 mt-2 py-16 rounded"></span>
+      </div>
+      <div className="flex flex-row items-center absolute right-4 bottom-2 py-0 px-2 flex flex-col gap-4 pointer-events-auto">
+        <p
+          id="big-cursor"
+          className="cursor-pointer m-auto writing-mode text-sm font-normal hover:text-green"
+        >
+          ghan6171@gmail.com
+        </p>
+        <span className="bg-white w-0.5 mt-2 py-10 rounded"></span>
       </div>
     </div>
   );

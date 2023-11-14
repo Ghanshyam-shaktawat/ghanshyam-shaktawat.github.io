@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Cursor() {
+  const [initial, setInitial] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [cursorVarient, setCursorVarient] = useState("default");
+  const [cursorVarient, setCursorVarient] = useState("hidden");
   const [click, setClick] = useState(false);
   const [linkHover, setLinkHover] = useState(false);
 
@@ -14,6 +15,7 @@ export default function Cursor() {
       width: `${size}px`,
       height: `${size}px`,
       mixBlendMode: "difference",
+      opacity: 1,
     },
 
     hidden: {
@@ -45,7 +47,9 @@ export default function Cursor() {
     };
 
     const mMove = (e) => {
+      setCursorVarient("default");
       setPosition({ x: e.clientX, y: e.clientY });
+      setInitial(true)
     };
 
     const mLeave = () => {
@@ -85,14 +89,20 @@ export default function Cursor() {
   }, []);
 
   return (
-    <motion.div
-      className={
-        "cursor " + (linkHover ? "hover " : " ") + (click ? "click " : " ")
-      }
-      ref={cursor}
-      style={{ top: position.y - size / 2, left: position.x - size / 2 }}
-      variants={variants}
-      animate={cursorVarient}
-    />
+      <motion.div
+        className={
+          (initial ? "cursor " : ' ') + (linkHover ? "hover " : " ") + (click ? "click " : " ")
+        }
+        ref={cursor}
+        style={{ top: position.y - size / 2, left: position.x - size / 2 }}
+        variants={variants}
+        animate={cursorVarient}
+        transition={{
+          type: "spring",
+          damping: 3,
+          stiffness: 50,
+          restDelta: 0.001
+        }}
+      />
   );
 }
