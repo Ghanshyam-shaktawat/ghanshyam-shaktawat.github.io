@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import Topbar from "./components/Topbar";
 import Home from "./sections/Home";
 import About from "./sections/About";
+import Projects from './sections/Projects'
+import Contact from "./sections/Contact";
 import Cursor from "./components/CustomCursor";
 import LoadingAnim from "./loader/LoadingAnim";
 import { AnimatePresence } from 'framer-motion';
@@ -21,21 +23,27 @@ function App() {
   }, []);
 
   return (
-    <div className="scroll-smooth	font-noto">
+    <div className="font-noto">
       <AnimatePresence mode="wait">
         {toogleLoading && <LoadingAnim />}
       </AnimatePresence>
-      <div className="scroll-smooth	">
+      <div className="">
       {!toogleLoading && <Cursor />}
-        <div className="scroll-smooth">
+        <main className="">
           <Topbar />
           <div>
             <Home />
           </div>
           <div id="about">
-            {/* <About /> */}
+            <About />
           </div>
-        </div>
+          <div id="projects">
+            <Projects />
+          </div>
+          <div id="contact">
+            <Contact />
+          </div>
+        </main>
       </div>
     </div>
   );

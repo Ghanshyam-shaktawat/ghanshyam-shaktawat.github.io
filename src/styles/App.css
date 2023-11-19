@@ -1,6 +1,4 @@
 .cursor {
-  width: 28px;
-  height: 28px;
   background-color: #ffffff;
   z-index: 1000;
   border-radius: 50%;
@@ -40,7 +38,7 @@
   border-radius: 50%;
   background-color: #fff;
   transform-origin: 50%;
-  animation: bounce 360ms alternate 8 ease;
+  animation: bounce 280ms alternate infinite ease;
   animation-delay: 800;
 }
 

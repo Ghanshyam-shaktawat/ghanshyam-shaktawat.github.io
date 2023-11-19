@@ -5,18 +5,6 @@ export default function LoadingAnim() {
   const words = ["नमस्ते", "Hello", "やあ"];
   const [index, setIndex] = useState(0);
 
-  const opacity = {
-    initial: {
-      opacity: 0,
-    },
-
-    enter: {
-      opacity: 0.85,
-      transition: { duration: 1.2, delay: 0.2 },
-    },
-  };
-
-
   useEffect(() => {
     if (words == index.length - 1) return;
     setTimeout(
@@ -34,7 +22,18 @@ export default function LoadingAnim() {
     },
     exit: {
       top: "-100vh",
-      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+      transition: { duration: 1.0, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+    },
+  };
+
+  const opacity = {
+    initial: {
+      opacity: 0,
+    },
+
+    enter: {
+      opacity: 0.85,
+      transition: { duration: 1.2, delay: 0.2 },
     },
   };
 
@@ -43,7 +42,9 @@ export default function LoadingAnim() {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className={"h-screen w-screen bg-black z-50 fixed flex flex-col items-center justify-center	loader"}
+      className={
+        "h-screen w-screen bg-black z-50 fixed flex flex-col items-center justify-center"
+      }
     >
       <motion.p initial="initial" variants={opacity} animate="enter">
         <span className="bounceball"></span>

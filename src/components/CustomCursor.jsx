@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { isMobile } from "react-device-detect";
 
 export default function Cursor() {
   const [initial, setInitial] = useState(false);
@@ -9,7 +10,7 @@ export default function Cursor() {
   const [linkHover, setLinkHover] = useState(false);
 
   const cursor = useRef();
-  const size = 30;
+  const size = 32;
   const variants = {
     default: {
       width: `${size}px`,
@@ -49,7 +50,7 @@ export default function Cursor() {
     const mMove = (e) => {
       setCursorVarient("default");
       setPosition({ x: e.clientX, y: e.clientY });
-      setInitial(true)
+      setInitial(true);
     };
 
     const mLeave = () => {
@@ -83,26 +84,24 @@ export default function Cursor() {
       });
     };
 
-    addEventListener();
-    addLinkEvents();
-    return () => removeEventListener();
+    if (!isMobile) {
+      addEventListener();
+      addLinkEvents();
+      return () => removeEventListener();
+    }
   }, []);
 
   return (
-      <motion.div
-        className={
-          (initial ? "cursor " : ' ') + (linkHover ? "hover " : " ") + (click ? "click " : " ")
-        }
-        ref={cursor}
-        style={{ top: position.y - size / 2, left: position.x - size / 2 }}
-        variants={variants}
-        animate={cursorVarient}
-        transition={{
-          type: "spring",
-          damping: 3,
-          stiffness: 50,
-          restDelta: 0.001
-        }}
-      />
+    <motion.div
+      className={
+        (initial ? "cursor " : " ") +
+        (linkHover ? "hover " : " ") +
+        (click ? "click " : " ")
+      }
+      ref={cursor}
+      style={{ top: position.y - size / 2, left: position.x - size / 2 }}
+      variants={variants}
+      animate={cursorVarient}
+    />
   );
 }
