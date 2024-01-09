@@ -3,6 +3,7 @@ import Topbar from "./components/Topbar";
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Projects from './sections/Projects'
+import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
 import Cursor from "./components/CustomCursor";
 import LoadingAnim from "./loader/LoadingAnim";
@@ -36,6 +37,9 @@ function App() {
           </div>
           <div id="about">
             <About />
+          </div>
+          <div id="skills">
+            <Skills />
           </div>
           <div id="projects">
             <Projects />

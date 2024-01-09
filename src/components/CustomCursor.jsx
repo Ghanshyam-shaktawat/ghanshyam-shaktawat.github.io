@@ -31,9 +31,6 @@ export default function Cursor() {
       document.addEventListener("mouseleave", mLeave);
       document.addEventListener("mousedown", mDown);
       document.addEventListener("mouseup", mUp);
-      document.addEventListener("contextmenu", (e) => {
-        e.preventDefault();
-      });
     };
 
     const removeEventListener = () => {
@@ -42,9 +39,6 @@ export default function Cursor() {
       document.removeEventListener("mouseleave", mLeave);
       document.removeEventListener("mousedown", mDown);
       document.removeEventListener("mouseup", mUp);
-      document.removeEventListener("contextmenu", (e) => {
-        e.preventDefault();
-      });
     };
 
     const mMove = (e) => {

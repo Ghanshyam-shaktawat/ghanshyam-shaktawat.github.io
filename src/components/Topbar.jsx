@@ -1,5 +1,5 @@
-import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
-import { DiGithubAlt } from "react-icons/di";
+import { AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
+import { DiGithubBadge } from "react-icons/di";
 import MagneticButton from "../components/MagneticButton";
 
 function Topbar() {
@@ -17,16 +17,7 @@ function Topbar() {
           <ol className="flex gap-4">
             <li>
               <a
-                className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green before:content-['01.'] before:pr-1 before:text-green"
-                aria-current="page"
-                href="#"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green before:content-['02.'] before:pr-1 before:text-green"
+                className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green before:content-[] before:pr-1 before:text-white"
                 href="#about"
               >
                 About
@@ -34,7 +25,15 @@ function Topbar() {
             </li>
             <li>
               <a
-                className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green before:content-['03.'] before:pr-1 before:text-green"
+                className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green before:content-[] before:pr-1 before:text-white"
+                href="#projects"
+              >
+                Experience
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green before:content-[] before:pr-1 before:text-white"
                 href="#projects"
               >
                 Projects
@@ -42,7 +41,7 @@ function Topbar() {
             </li>
             <li>
               <a
-                className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green before:content-['04.'] before:pr-1 before:text-green"
+                className="text-white font-semibold px-4 py-2 text-sm uppercase hover:text-green before:content-[] before:pr-1 before:text-white"
                 href="#contact"
               >
                 Contact
@@ -53,22 +52,28 @@ function Topbar() {
         <div className="flex items-center pe-6 gap-4 pointer-events-auto box-content	">
           {/* TODO app button links */}
           <MagneticButton>
-            <AiFillLinkedin
-              id="big-cursor"
-              className="w-7 h-7 hover:text-green cursor-pointer rounded-full box-content p-1 border-2 border-green "
-            />
+            <a href="https://github.com/Ghanshyam-shaktawat" target="_blank">
+              <AiFillLinkedin
+                id="big-cursor"
+                className="text-black bg-white w-7 h-7 cursor-pointer rounded-full box-content p-1 "
+              />
+            </a>
           </MagneticButton>
           <MagneticButton>
-            <DiGithubAlt
-              id="big-cursor"
-              className="w-7 h-7 hover:text-green cursor-pointer rounded-full box-content p-1 border-2 border-green"
-            />
+            <a href="https://github.com/Ghanshyam-shaktawat" target="_blank">
+              <DiGithubBadge
+                id="big-cursor"
+                className="text-black bg-white w-9 h-9 cursor-pointer rounded-full box-content p-0"
+              />
+            </a>
           </MagneticButton>
           <MagneticButton>
-            <AiFillInstagram
-              id="big-cursor"
-              className="w-7 h-7 hover:text-green cursor-pointer rounded-full box-content p-1 border-2 border-green"
-            />
+            <a href="https://github.com/Ghanshyam-shaktawat" target="_blank">
+              <AiFillInstagram
+                id="big-cursor"
+                className="text-black bg-white w-7 h-7 cursor-pointer rounded-full box-content p-1"
+              />
+            </a>
           </MagneticButton>
         </div>
       </div>
