@@ -1,18 +1,18 @@
-import {
-  DiReact,
-  DiDjango,
-  DiGit,
-  DiHtml5,
-  DiCss3,
-  DiNodejs,
-  DiJsBadge,
-  DiPython,
-} from "react-icons/di";
-import { SiTailwindcss, SiThreedotjs, SiVercel } from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
+// import {
+//   DiReact,
+//   DiDjango,
+//   DiGit,
+//   DiHtml5,
+//   DiCss3,
+//   DiNodejs,
+//   DiJsBadge,
+//   DiPython,
+// } from "react-icons/di";
+// import { SiTailwindcss, SiThreedotjs, SiVercel } from "react-icons/si";
+// import { BiLogoPostgresql } from "react-icons/bi";
 import MagneticButton from "../components/MagneticButton";
 import { AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
-import { DiGithubAlt } from "react-icons/di";
+import { DiGithubBadge } from "react-icons/di";
 
 export default function About() {
   return (
@@ -26,12 +26,13 @@ export default function About() {
             </div>
             <p className="text-left w-5/6 text-base">
               Meet Ghanshyam Singh Shaktawat—an aspiring full-stack developer
-              and MCA student at MIT College, Pune. <br /><br />
+              and MCA student at MIT College, Pune. <br />
+              <br />
               My journey began in 2018, sparked by a desire to craft a custom
-              WordPress template as a content writer. Since then, I've delved
-              into HTML, CSS, various frameworks, and ventured into Django. A
-              self-taught developer driven by discipline, my learning path is a
-              continuous evolution.
+              WordPress template as a content writer. Since then, I&apos;ve
+              delved into HTML, CSS, various frameworks, and ventured into
+              Django. A self-taught developer driven by discipline, my learning
+              path is a continuous evolution.
               <br />
               <br />
               Beyond coding, I find joy in video games, fiction novels, and the
@@ -42,9 +43,9 @@ export default function About() {
               <p>Follow me to know more:</p>
               {/* TODO add links for social apps */}
               <MagneticButton>
-                <DiGithubAlt
+                <DiGithubBadge
                   id="big-cursor"
-                  className="w-10 h-10 hover:text-green cursor-pointer rounded-full p-1 border-2"
+                  className="w-10 h-10 hover:text-green cursor-pointer rounded-full p-0 border-2"
                 />
               </MagneticButton>
               <MagneticButton>
