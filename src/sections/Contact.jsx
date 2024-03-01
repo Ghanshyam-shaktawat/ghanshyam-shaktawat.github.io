@@ -12,11 +12,16 @@ export default function Contact() {
           forward to connecting with you!
         </p>
         <div className="h-2 mt-4 pointer-events-auto">
-          <button className="bg-white font-normal rounded font-sans ">
+          <a
+            className="bg-white font-normal rounded block font-sans"
+            href="mailto:ghan6171@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className="block bg-d-gray py-2 px-wide rounded border-2 text-lg text-white hover:translate-x-[-5px] hover:translate-y-[-5px] duration-200 transition-all ease-in">
-              Say Hello!
+              Say Hello
             </span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

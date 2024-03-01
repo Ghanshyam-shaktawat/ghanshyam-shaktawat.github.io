@@ -66,7 +66,7 @@ export default function About() {
             <div className="rounded-md border-2 border-green w-fit">
               <img
                 id="big-cursor"
-                src="Gopal.webp"
+                src="ghanshyam.jpg"
                 alt="ghanshyam shaktawat"
                 className="w-80 rounded-md translate-x-[-12px] translate-y-[12px] hover:translate-x-[-20px] hover:translate-y-[20px] duration-100 transition-all ease-in"
               />
