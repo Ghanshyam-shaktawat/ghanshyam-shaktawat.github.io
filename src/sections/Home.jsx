@@ -11,20 +11,22 @@ export default function Home() {
     <section className="relative h-screen bg-d-gray flex flex-col justify-center items-center text-left pointer-events-auto">
       <div className="max-w-[1200px] w-full flex justify-center items-center text-center text-white">
         <div className="w-7/12 flex flex-col items-start text-center text-white gap-4 z-10">
-          <p className="uppercase text-2xl font-bold">Hi there, I&apos;M</p>
+          <p className="uppercase text-2xl font-bold ps-2">
+            Hi there, I&apos;M
+          </p>
           <h1
             id="big-cursor"
             className="text-6xl font-black uppercase text-left leading-[4rem] text-green"
           >
             Ghanshyam
           </h1>
-          <h2 className="capitalize text-5xl font-bold text-[#d9d9d9] leading-[3rem]">
+          <h2 className="capitalize text-5xl font-bold text-[#d9d9d9] leading-[3rem] ps-2">
             a full stack web developer
           </h2>
-          <p className="max-w-2xl text-lg text-left font-normal">
-            Master&apos;s in Computer Application (MCA) student with a passion
-            for coding, gaming, and novels—bridging technology and creativity
-            seamlessly.
+          <p className="max-w-2xl text-lg text-left font-normal ps-2">
+            I'm someone with a passion for coding, linux, gaming, and novels.
+            <br />
+            <span className="italic">"Btw I use Arch Linux."</span>
           </p>
           <div className="h-2 mt-4">
             <a

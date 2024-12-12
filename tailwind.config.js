@@ -40,7 +40,7 @@ export default {
         "dark-blue": "#141C3A",
         gray: "#58595B",
         black: "#000000",
-        "d-gray": "#080F0F",
+        "d-gray": "#071108",
         green: "#09F755",
         pink: "#FF206E",
       },
@@ -48,4 +48,3 @@ export default {
   },
   plugins: [],
 };
-

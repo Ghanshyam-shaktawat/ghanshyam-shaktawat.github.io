@@ -11,7 +11,7 @@ import { AnimatePresence } from "framer-motion";
 import "./styles/App.css";
 
 function App() {
-  const [toogleLoading, setToogleLoading] = useState(false);
+  const [toogleLoading, setToogleLoading] = useState(true);
   const scrollAboutRef = useRef(null);
   const scrollContactRef = useRef(null);
   const scrollSkillsRef = useRef(null);
@@ -45,9 +45,9 @@ function App() {
 
   return (
     <div className="font-noto">
-      {/* <AnimatePresence mode="wait"> */}
-      {/*   {toogleLoading && <LoadingAnim />} */}
-      {/* </AnimatePresence> */}
+      <AnimatePresence mode="wait">
+        {toogleLoading && <LoadingAnim />}
+      </AnimatePresence>
       {!toogleLoading && (
         <div className="">
           <Cursor />
