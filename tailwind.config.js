@@ -47,4 +47,7 @@ export default {
     },
   },
   plugins: [],
+  future: {
+    disableColorOpacityUtilitiesByDefault: true,
+  },
 };

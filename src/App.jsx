@@ -44,14 +44,14 @@ function App() {
   };
 
   return (
-    <div className="font-noto">
+    <div className="font-noto w-screen">
       <AnimatePresence mode="wait">
         {toogleLoading && <LoadingAnim />}
       </AnimatePresence>
       {!toogleLoading && (
         <div className="">
           <Cursor />
-          <main className="">
+          <main className="bg-black">
             <Topbar
               scrollToAbout={scrollToAbout}
               scrollToExperience={scrollToExperience}
